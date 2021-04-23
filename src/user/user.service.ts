@@ -16,4 +16,12 @@ export class UserService {
   getHello(): string {
     return 'hello ruios';
   }
+
+  async addUser(data: User): Promise<User> {
+    console.log(data);
+    const user = new User();
+    user.name = data.name;
+    user.password = data.password;
+    return await this.userRepository.save(user);
+  }
 }

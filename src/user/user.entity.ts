@@ -8,15 +8,6 @@ export class User {
   @Column({ length: 500 })
   name: string;
 
-  @Column('text')
-  description: string;
-
-  @Column()
-  filename: string;
-
-  @Column('int')
-  views: number;
-
-  @Column()
-  isPublished: boolean;
+  @Column({ length: 500 })
+  password: string;
 }
